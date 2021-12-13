@@ -1,0 +1,11 @@
+{
+  "extends": "standard-with-typescript",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "object-curly-spacing": ["error", "never"],
+    "semi": "off",
+    "@typescript-eslint/semi": ["error", "always"]
+  }
+}

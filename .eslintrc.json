@@ -6,6 +6,7 @@
   "rules": {
     "object-curly-spacing": ["error", "never"],
     "semi": "off",
-    "@typescript-eslint/semi": ["error", "always"]
+    "@typescript-eslint/semi": ["error", "always"],
+    "@typescript-eslint/camelcase": "off"
   }
 }

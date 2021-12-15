@@ -7,5 +7,5 @@ export default {
   transform: {
     '.+\\.ts$': 'ts-jest'
   },
-  testMatch: ['/**/*.spec.ts', '/**/*.test.ts']
+  testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)']
 };

@@ -8,7 +8,7 @@ export default {
     '!<rootDir>/src/presentation/protocols/*.ts'
   ],
   coverageDirectory: 'coverage',
-  testEnvironment: 'node',
+  preset: '@shelf/jest-mongodb',
   transform: {
     '.+\\.ts$': 'ts-jest'
   },

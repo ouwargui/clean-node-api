@@ -1,7 +1,12 @@
 export default {
   roots: ['<rootDir>/src'],
   collectCoverage: false,
-  collectCoverageFrom: ['<rootDir>/src/**/*.ts'],
+  collectCoverageFrom: [
+    '<rootDir>/src/**/*.ts',
+    '!<rootDir>/src/data/usecases/add-account/db-add-account-protocols.ts',
+    '!<rootDir>/src/presentation/controller/signup/signup-protocols.ts',
+    '!<rootDir>/src/presentation/protocols/*.ts'
+  ],
   coverageDirectory: 'coverage',
   testEnvironment: 'node',
   transform: {

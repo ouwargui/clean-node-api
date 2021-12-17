@@ -5,7 +5,8 @@ export default {
     '<rootDir>/src/**/*.ts',
     '!<rootDir>/src/data/usecases/add-account/db-add-account-protocols.ts',
     '!<rootDir>/src/presentation/controller/signup/signup-protocols.ts',
-    '!<rootDir>/src/presentation/protocols/*.ts'
+    '!<rootDir>/src/presentation/protocols/*.ts',
+    '!<rootDir>/src/main/**'
   ],
   coverageDirectory: 'coverage',
   preset: '@shelf/jest-mongodb',

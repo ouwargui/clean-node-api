@@ -10,7 +10,8 @@ afterAll(async () => {
 });
 
 beforeEach(async () => {
-  await MongoHelper.getCollection('accounts').deleteMany({});
+  const accountCollection = await MongoHelper.getCollection('accounts');
+  await accountCollection.deleteMany({});
 });
 
 const makeSut = (): AccountMongoRepository => {

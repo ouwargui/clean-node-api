@@ -26,9 +26,8 @@ export class LoginController implements Controller {
         if (!httpRequest.body[field]) return badRequest(new MissingParamError(field));
       }
 
-      if (!this.emailValidator.isValid(httpRequest.body.email)) {
-        return badRequest(new InvalidParamError('email'));
-      };
+      if (!this.emailValidator.isValid(httpRequest.body.email)) return badRequest(new InvalidParamError('email'));
+
       const accessToken = await this.authentication.auth(email, password);
       if (!accessToken) return unauthorized();
 

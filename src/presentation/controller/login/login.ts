@@ -1,5 +1,5 @@
 import {InvalidParamError, MissingParamError} from '../../errors';
-import {badRequest, serverError, unauthorized} from '../../helpers/http-helper';
+import {badRequest, ok, serverError, unauthorized} from '../../helpers/http-helper';
 import {
   Controller,
   httpRequest,
@@ -32,7 +32,7 @@ export class LoginController implements Controller {
       const accessToken = await this.authentication.auth(email, password);
       if (!accessToken) return unauthorized();
 
-      return new Promise(resolve => resolve(null as unknown as httpResponse));
+      return ok({accessToken});
     } catch (error: any) {
       return serverError(error);
     }
